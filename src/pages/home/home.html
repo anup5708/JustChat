@@ -12,14 +12,17 @@
 
     <ion-toolbar color="primary" mode="md">
         <ion-segment color="light" mode="md" [(ngModel)]="section">
+            <ion-segment-button value="camera">
+                <ion-icon name="camera"></ion-icon>
+            </ion-segment-button>
             <ion-segment-button value="one">
-                <ion-icon name="home"></ion-icon>
+                CHATS
             </ion-segment-button>
             <ion-segment-button value="two">
-                <ion-icon name="cog"></ion-icon>
+                STATUS
             </ion-segment-button>
             <ion-segment-button value="three">
-                <ion-icon name="chatbubbles"></ion-icon>
+                CALLS
             </ion-segment-button>
         </ion-segment>
     </ion-toolbar>
