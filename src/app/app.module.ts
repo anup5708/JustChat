@@ -8,7 +8,8 @@ import { HomePage } from '../pages/home/home';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { ShrinkingSegmentHeaderModule } from '../components/shrinking-segment-header/shrinking-segment-header.module';
-
+import { SuperTabsModule } from 'ionic2-super-tabs';
+import { SuperTabsController } from 'ionic2-super-tabs';
 @NgModule({
   declarations: [
     MyApp,
@@ -17,7 +18,8 @@ import { ShrinkingSegmentHeaderModule } from '../components/shrinking-segment-he
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    ShrinkingSegmentHeaderModule
+    ShrinkingSegmentHeaderModule,
+    SuperTabsModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -26,6 +28,7 @@ import { ShrinkingSegmentHeaderModule } from '../components/shrinking-segment-he
   ],
   providers: [
     StatusBar,
+    SuperTabsController,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]

@@ -28,16 +28,17 @@ export class ShrinkingSegmentHeader {
 
         // lets get the active page's view controller
         this.activePage = this.navCtrl.getActive().getHeader();
-console.log(this.activePage);
+console.log("the active page",this.activePage);
         // let's select the header of the active page
         this.header = this.activePage._elementRef.nativeElement;
-
+console.log('HEADER',this.header);
         // the height of the header
         //this.headerHeight = this.header.clientHeight;
         this.headerHeight = 56;
     }
 
     onContentScroll(ev) {
+        console.log('content is scrolling');
         ev.domWrite(() => {
             this.updateHeader(ev);
         });   
